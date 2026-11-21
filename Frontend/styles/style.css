@@ -1,0 +1,67 @@
+:root {
+  --rail-red: #b42318;
+  --rail-red-dark: #8f1d14;
+  --ink: #182230;
+  --muted: #667085;
+  --line: #e4e7ec;
+  --surface: #ffffff;
+  --canvas: #f5f7fa;
+  --success: #067647;
+  --warning: #b54708;
+}
+
+html, body, [class*="css"] { font-family: "Segoe UI", "Noto Sans Devanagari", sans-serif; }
+.stApp { background: #f5f7fa !important; color: #182230 !important; }
+.stApp * { letter-spacing: 0 !important; }
+[data-testid="stSidebar"] { background: #ffffff !important; border-right: 1px solid #e4e7ec; }
+[data-testid="stSidebar"] * { color: #182230 !important; }
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] *,
+[data-testid="stSidebar"] small,
+[data-testid="stSidebar"] .stCaption { color: #667085 !important; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label { color: #344054 !important; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label p { color: #344054 !important; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label:hover { background: #f2f4f7; }
+[data-testid="stSidebar"] [data-testid="stRadio"] [data-checked="true"] + div,
+[data-testid="stSidebar"] [data-testid="stRadio"] [aria-checked="true"] { color: #b42318 !important; }
+[data-testid="stSidebar"] strong,
+[data-testid="stSidebar"] code,
+[data-testid="stSidebar"] .stMarkdown,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] { color: #344054 !important; font-weight: 600; }
+[data-testid="stSidebar"] [data-testid="stAlert"] {
+  background: #fff4ed !important;
+  border: 1px solid #fed7aa !important;
+}
+[data-testid="stSidebar"] [data-testid="stAlert"] p,
+[data-testid="stSidebar"] [data-testid="stAlert"] span,
+[data-testid="stSidebar"] [data-testid="stAlert"] div { color: #9a3412 !important; font-weight: 700; }
+[data-testid="stSidebar"] > div:first-child { padding-top: 1.5rem; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label { border-radius: 6px; padding: 0.35rem 0.2rem; }
+[data-testid="stSidebar"] [data-testid="stRadio"] label:hover { background: #f0f2f5; }
+.brand-mark { width: 44px; height: 44px; display: grid; place-items: center; background: var(--rail-red); border-radius: 8px; margin-bottom: 0.6rem; }
+.brand-mark span { color: white; font-size: 1.35rem; font-weight: 800; }
+.sidebar-divider { height: 1px; background: var(--line); margin: 1rem 0; }
+.page-header { border-bottom: 1px solid #e4e7ec; margin-bottom: 1.25rem; padding: 0.15rem 0 1rem; color: #182230; }
+.page-header h1, .page-header p, [data-testid="stMain"] h1, [data-testid="stMain"] h2, [data-testid="stMain"] h3 { color: #182230 !important; }
+.page-header p { color: #667085 !important; }
+[data-testid="stMain"] p, [data-testid="stMain"] span, [data-testid="stMain"] label, [data-testid="stMain"] caption { color: #344054; }
+[data-testid="stMain"] [data-testid="stContainer"] { background: #ffffff; border-color: #e4e7ec; }
+.page-header h1 { font-size: 1.75rem; letter-spacing: 0; margin: 0; }
+.page-header p { color: var(--muted); margin: 0.35rem 0 0; }
+[data-testid="stChatMessage"] { border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+[data-testid="stChatInput"] textarea { border-radius: 8px; }
+[data-testid="stContainer"] { background: var(--surface); }
+div[data-testid="stHorizontalBlock"] div[data-testid="column"] { min-width: 0; }
+.status-chip { display: inline-block; border-radius: 999px; padding: 0.3rem 0.65rem; font-size: 0.78rem; font-weight: 700; }
+.status-chip.confirmed { color: var(--success); background: #ecfdf3; }
+.status-chip.waiting { color: var(--warning); background: #fff4ed; }
+.stButton > button { border-radius: 6px; min-height: 42px; border: 1px solid var(--line); }
+.stButton > button[kind="primary"] { background: var(--rail-red); border-color: var(--rail-red); }
+.stButton > button[kind="primary"]:hover { background: var(--rail-red-dark); border-color: var(--rail-red-dark); }
+[data-testid="stMetric"] { background: #f8fafc; border: 1px solid var(--line); border-radius: 8px; padding: 0.75rem; }
+[data-testid="stAlert"] { border-radius: 8px; }
+
+@media (max-width: 768px) {
+  .page-header h1 { font-size: 1.35rem; }
+  [data-testid="stSidebar"] { min-width: 16rem; }
+  div[data-testid="stHorizontalBlock"] { flex-wrap: wrap; }
+}
