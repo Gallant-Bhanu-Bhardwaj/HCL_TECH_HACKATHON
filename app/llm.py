@@ -14,7 +14,7 @@ import requests
 
 MOCK = os.getenv("MOCK_LLM", "false").lower() == "true"
 URL = os.getenv("LLM_URL", "http://localhost:11434/v1/chat/completions")
-MODEL = os.getenv("LLM_MODEL", "qwen2.5:7b")
+MODEL = os.getenv("LLM_MODEL", "qwen2.5:3b")
 API_KEY = os.getenv("LLM_API_KEY", "ollama")
 
 
