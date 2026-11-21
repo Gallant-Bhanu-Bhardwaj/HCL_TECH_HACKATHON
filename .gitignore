@@ -12,3 +12,30 @@ htmlcov/
 dist/
 build/
 *.egg-info/
+
+# Phase 0 additions (architecture.md §6, phase0-tasks.md T1)
+*.db
+*.sqlite
+*.sqlite3
+*.faiss
+.streamlit/secrets.toml
+node_modules/
+.ruff_cache/
+.mypy_cache/
+
+# LaTeX build artifacts (presentation/) — keep the .tex source and the
+# final .pdf, not the compiler's intermediate files.
+*.aux
+*.log
+*.out
+*.nav
+*.snm
+*.toc
+*.vrb
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+
+# Finder-compressed archives (e.g. a manual "Compress" of a folder) —
+# redundant with the real, unzipped directory already in the repo.
+*.zip
