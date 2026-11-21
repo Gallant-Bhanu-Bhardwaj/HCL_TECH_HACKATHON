@@ -1,10 +1,15 @@
 """
 Checks that agent.py and the backend fit together. Run from the repo root:
     python -m pytest -q
-Uses mock mode, so no LLM is needed. Must pass after every backend change.
+Uses mock mode, so no LLM is needed. Rebuilds the database first. Must pass after every backend change.
 """
+import subprocess
+import sys
+
 import pytest
 from app import agent, llm
+
+subprocess.run([sys.executable, "init_db.py"], check=True, capture_output=True)  # fresh database
 
 llm.MOCK = True
 AS_OF = "2026-12-03T10:00:00+05:30"

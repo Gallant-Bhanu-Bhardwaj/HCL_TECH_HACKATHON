@@ -45,7 +45,9 @@ INSERT INTO settings VALUES
  ('cancel_charge_2AC_over_48h',  240, 'CIR-2026-03', '2026-12-10'),
  ('cancel_pct_12_to_48h',        25,  'RUL-CAN-01',  '2026-01-01'),
  ('cancel_pct_4_to_12h',         50,  'RUL-CAN-01',  '2026-01-01'),
- ('no_refund_under_hours',       4,   'RUL-CAN-01',  '2026-01-01'),
+ ('cutoff_flat_hours',           48,  'RUL-CAN-01',  '2026-01-01'),
+ ('cutoff_mid_hours',            12,  'RUL-CAN-01',  '2026-01-01'),
+ ('cutoff_no_refund_hours',      4,   'RUL-CAN-01',  '2026-01-01'),
  ('boarding_change_cutoff_hours', 24, 'RUL-BRD-01',  '2026-01-01'),
  ('action_ttl_minutes',          10,  'RUL-GEN-01',  '2026-01-01');
 
